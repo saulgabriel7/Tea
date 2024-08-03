@@ -9,9 +9,11 @@ export function Header() {
   return (
     <section>
         <header className="header">
-            <div className="img">
-                <img src={Logo} alt="" />    
-                <img src={LogoText} alt="" />
+            <div>
+                <a href="/" className="logo">
+                    <img src={Logo} alt="" onClick={(e) => handleNavigation(e, '/Home')}/>
+                    <img src={LogoText} alt="" onClick={(e) => handleNavigation(e, '/Home')}/>
+                </a>
             </div>
 
             <div className="menu">

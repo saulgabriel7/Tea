@@ -4,10 +4,19 @@ export const HeaderContainer = styled.div`
     .header {
         display: flex;
         justify-content: space-between;
-        margin: 25px 10px;
+
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+
+        padding: 25px 15px;
+        text-align: center;
+        z-index: 1000;
     }
 
-    .img {
+    .logo {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -281,5 +290,117 @@ export const FooterContainer = styled.div`
 `
 
 export const IntegrantesContainer = styled.div`
+    .section {
+        padding: 20px;
+        text-align: center;
+        background-image: url(${props => props.theme.backgroundParticipantes});
+        opacity: 0.87;
+        background-size: cover;
+        background-position: center;
+        height: 85vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        gap: 100px;
+        margin-block: 50px;
+    }
 
+    .participantesContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 70px;
+    }
+
+    .textos {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        width: 1060px;
+        margin-top: 40px;
+    }
+
+    .textos p {
+        font-family: ${props => props.theme.fontDois};
+        font-size: 16px;
+    }
+
+    .textos h3 {
+        font-size: 30px;
+        font-weight: bold;
+        margin: 10px 0;
+    }
+
+    .cardContainer {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        width: 250px;
+        height: 300px;
+        overflow: hidden;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s;
+
+        &:hover {
+            transform: scale(1.05);
+        }
+
+        &:hover .card-info {
+            opacity: 1;
+        }
+    }
+
+    .card p {
+        color: #fff;
+    }
+
+    .card-info  {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        padding-left: 15px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding: 10px;
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
+
+    .card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .nome {
+        font-family: ${props => props.theme.fontUm};
+        font-size: 18px;
+        font-weight: bold;
+        text-align: start;
+        width: 100%;
+    }
+
+    .desc {
+        width: 100%;
+        text-align: start;
+        font-family: ${props => props.theme.fontUm};
+        font-size: 16px;
+    }
 `
