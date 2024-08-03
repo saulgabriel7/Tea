@@ -10,5 +10,5 @@ export const theme = {
     backgroundParticipantes: backgroundParticipantes,
     branco: "#fff",
     fundoFooter: "#182352",
-    cardSaul: "#039364",
-};
+    cardSaul: "#039364",    
+};   

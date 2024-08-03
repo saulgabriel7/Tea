@@ -1,6 +1,8 @@
-import { HeaderContainer, FooterContainer } from "./Home.styles";
+import { HeaderContainer, FooterContainer, MateriaisContainer } from "./Home.styles";
 import { Header } from "../components/Header"
 import { Footer } from "../components/Footer"
+import { Componentes } from "../components/Componentes"
+
 
 export  function Materiais() {
   return (
@@ -9,6 +11,10 @@ export  function Materiais() {
     <HeaderContainer>
         <Header/>
     </HeaderContainer>
+
+    <MateriaisContainer>
+        <Componentes/>
+    </MateriaisContainer>
 
     <FooterContainer>
        <Footer/>

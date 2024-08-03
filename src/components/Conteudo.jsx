@@ -1,7 +1,6 @@
 import sala from "../assets/sala.svg"
 import contexto from "../assets/contexto.svg"
 
-
 export function Conteudo() {
   return (
     <section className="conteudo">
@@ -25,7 +24,6 @@ export function Conteudo() {
 
             <div className="cont"><img src={contexto} alt="" /></div>
         </div>
-        
     </section>
   )
 }

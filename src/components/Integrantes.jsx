@@ -18,7 +18,6 @@ export function Integrantes() {
           <p >PARTICIPANTES</p>
           <h3>Quem fez esse projeto acontecer?</h3>
         </div>
-
         <div className="cardContainer" >
           { integrantes.map((integrante) => (
             <div className="card" key={integrante.nome} >
@@ -30,6 +29,8 @@ export function Integrantes() {
             </div>
           ))}
         </div>
+
+        
       </div>
     </section>
   )

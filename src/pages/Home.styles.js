@@ -4,16 +4,8 @@ export const HeaderContainer = styled.div`
     .header {
         display: flex;
         justify-content: space-between;
-
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        background-color: #fff;
-
         padding: 25px 15px;
-        text-align: center;
-        z-index: 1000;
+        width: 100%;
     }
 
     .logo {
@@ -33,6 +25,7 @@ export const HeaderContainer = styled.div`
         display: flex;
         list-style: none;
         gap: 28px;
+        flex-wrap: wrap;
     }
 
     .menu li a{
@@ -74,6 +67,12 @@ export const HeaderContainer = styled.div`
 `
 
 export const IntroContainer = styled.div`
+    .img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
     .img img {
         max-width: 100%;
     }
@@ -118,6 +117,7 @@ export const SobreContainer = styled.div`
         align-items: center;
         gap: 40px;
         margin-bottom: 60px;
+        flex-wrap: wrap;
     }
 
     .quadros div {
@@ -137,9 +137,11 @@ export const ConteudoContainer = styled.div`
     .conteudo {
         display: flex;
         justify-content: center;
+        align-items: center;
         gap: 50px;
         margin-block: 60px;
         max-width: 100%;
+        flex-wrap: wrap;
     }
 
     .contexto-1 {
@@ -182,16 +184,19 @@ export const ImagensContainer = styled.div`
     .footer {
         background: ${props => props.theme.sobre};
         display: flex;
+        justify-content: center;
+        align-items: center;
         flex-direction: column;
         height: 100%;
         padding-block: 60px;
-        max-width: 100%;
+        width: 100%;
     }
 
     .frase {
         display: flex;
         flex-direction: column;
         gap: 60px;
+        width: 100%;
     }
 
     .frase p{
@@ -201,6 +206,7 @@ export const ImagensContainer = styled.div`
 
     .imagens {
         display: flex;
+        width: 100%;
         gap: 100px;
         justify-content: end;
     }
@@ -210,7 +216,7 @@ export const ImagensContainer = styled.div`
     }
 `
 
-export const FooterContainer = styled.div`
+export const EnviarContainer = styled.div`
     .footer {
         background-image: url(${props => props.theme.backgroundImage});
         opacity: 0.87;
@@ -223,7 +229,7 @@ export const FooterContainer = styled.div`
         align-items: center;
         text-align: center;
         width: 100%;
-    }
+    }    
 
     .textos p {
         font-family: ${props => props.theme.fontDois};
@@ -266,7 +272,9 @@ export const FooterContainer = styled.div`
         right: 20px;
         bottom: x;
     }
+`
 
+export const FooterContainer = styled.div`
     .rodape {
         display: flex;
         justify-content: center;
@@ -297,7 +305,7 @@ export const IntegrantesContainer = styled.div`
         opacity: 0.87;
         background-size: cover;
         background-position: center;
-        height: 85vh;
+        height: 100%;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -305,7 +313,6 @@ export const IntegrantesContainer = styled.div`
         text-align: center;
         width: 100%;
         gap: 100px;
-        margin-block: 50px;
     }
 
     .participantesContainer {
@@ -313,6 +320,7 @@ export const IntegrantesContainer = styled.div`
         flex-direction: column;
         align-items: center;
         gap: 70px;
+        flex-wrap: wrap;
     }
 
     .textos {
@@ -321,7 +329,6 @@ export const IntegrantesContainer = styled.div`
         justify-content: start;
         align-items: start;
         width: 1060px;
-        margin-top: 40px;
     }
 
     .textos p {
@@ -346,11 +353,11 @@ export const IntegrantesContainer = styled.div`
         display: flex;
         flex-direction: column;
         position: relative;
+        margin-bottom: 50px;
         width: 250px;
         height: 300px;
         overflow: hidden;
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        border-radius: 12px;
         transition: transform 0.3s;
 
         &:hover {
@@ -402,5 +409,71 @@ export const IntegrantesContainer = styled.div`
         text-align: start;
         font-family: ${props => props.theme.fontUm};
         font-size: 16px;
+    }
+`
+
+export const MateriaisContainer = styled.div`
+    .componentes {
+        background: ${props => props.theme.sobre};
+        padding-top: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .titulo {
+        font-size: 16px;
+        font-family: ${props => props.theme.fontDois};
+        text-align: center;
+    }
+
+    .sub-titulo {
+        font-family: ${props => props.theme.fontUm};
+        text-align: center;
+        font-size: 30px;
+        margin-top: 10px;
+    }
+
+    .cards {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        flex-direction: column;
+        gap: 50px;
+        width: 613px;
+        height: auto;
+        margin-top: 100px;
+    }
+
+    .card {
+        padding: 40px;
+        border-radius: 20px;
+        background: ${props => props.theme.branco};
+    }
+
+    .arduino {
+        display: flex;
+        gap: 50px;
+    }
+
+    .arduino img{
+        width: 200px;
+        height: auto;
+    }
+
+    .card img {
+        margin-bottom: 10px;
+    }
+
+
+    .imagem {
+        display: flex;
+    }
+
+    .imagem img {
+        width: 100%;
+        height: auto;
     }
 `
