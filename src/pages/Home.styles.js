@@ -5,7 +5,8 @@ export const HeaderContainer = styled.div`
         display: flex;
         justify-content: space-between;
         padding: 25px 15px;
-        width: 100%;
+        max-width: 100%;
+        height: auto;
     }
 
     .logo {
@@ -474,6 +475,66 @@ export const MateriaisContainer = styled.div`
 
     .imagem img {
         width: 100%;
+        height: auto;
+    }
+`
+
+export const ExplicacaoContainer = styled.div`
+    .section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .explicacao-1 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: ${props => props.theme.sobre};
+        width: 100%;
+        padding-top: 30px;
+    }
+
+    .textos h3 {
+        font-size: 30px;
+        margin-bottom: 18px;
+        margin-top: 20px;
+    }
+
+    .textos p {
+        font-size: 17px;
+        margin-bottom: 50px;
+    }
+
+    .imagem-1 img {
+        width: 500px;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .explicacao-2 {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        padding-top: 100px;
+        gap: 40px;
+    }
+
+    .imagem-2 img {
+        width: 500px;
+        max-width: 100%;
+        height: auto;
+        border-radius: 20px;
+    }
+
+    .maos {
+        display: flex;
+        justify-content: end;
+    }
+
+    .maos img {
+        max-width: 100%;
         height: auto;
     }
 `

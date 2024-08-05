@@ -1,5 +1,6 @@
-import { HeaderContainer, FooterContainer } from "./Home.styles";
+import { HeaderContainer, ExplicacaoContainer, FooterContainer } from "./Home.styles";
 import { Header } from "../components/Header"
+import { Explicacao } from "../components/Explicacao"
 import { Footer } from "../components/Footer"
 
 export  function Descobrir() {
@@ -9,6 +10,10 @@ export  function Descobrir() {
     <HeaderContainer>
         <Header/>
     </HeaderContainer>
+
+    <ExplicacaoContainer>
+        <Explicacao/>
+    </ExplicacaoContainer>
 
     <FooterContainer>
        <Footer/>

@@ -14,4 +14,9 @@ export const GlobalStyle = createGlobalStyle`
     p, h3 {
         color: ${props => props.theme.corTexto};
     }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
 `
