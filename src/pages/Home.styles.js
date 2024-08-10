@@ -503,8 +503,9 @@ export const ExplicacaoContainer = styled.div`
     }
 
     .textos p {
-        font-size: 17px;
+        font-size: 18px;
         margin-bottom: 50px;
+        
     }
 
     .imagem-1 img {
@@ -526,6 +527,174 @@ export const ExplicacaoContainer = styled.div`
         max-width: 100%;
         height: auto;
         border-radius: 20px;
+    }
+
+    .maos {
+        display: flex;
+        justify-content: end;
+    }
+
+    .maos img {
+        max-width: 100%;
+        height: auto;
+    }
+`
+
+export const ManualContainer = styled.div`
+    .manual {
+        display: flex;
+        flex-direction: column;
+        padding-inline: 135px;
+        padding-top: 70px;
+    }
+
+    .titulo {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 50px;
+    }
+
+    .titulo p {
+        font-family: ${props => props.theme.fontDois};
+        font-size: 18px;
+    }
+
+    .titulo h3 {
+        font-size: 24px;
+        margin-top: 5px;
+        margin-bottom: 50px;
+    }
+
+    .titulo img {
+        width: 900px;
+    }
+
+    .descricao h4 {
+        font-size: 24px;
+        margin-block: 35px;
+    }
+
+    .descricao h5{
+        font-size: 19px;
+        font-weight: normal;
+    }
+
+    .descricao p {
+        font-family: ${props => props.theme.fontDois};
+        font-size: 17px;
+    }
+
+    .descricao p, 
+    .descricao h5 {
+        padding-left: 20px;
+    }
+
+    .maos {
+        display: flex;
+        justify-content: end;
+    }
+
+    .maos img {
+        max-width: 100%;
+        height: auto;
+    }
+`
+
+export const EvidenciasContainer = styled.div`
+    .comprovacoes {
+        display: flex;
+        flex-direction: column;
+        max-width: 100%;
+        background: ${props => props.theme.sobre};
+
+    }
+
+    .quadro {
+        position: sticky;
+        top: 0; 
+        width: 800px;
+        height: 245px;
+        padding-inline: 50px;
+    }
+
+    .quadro h3 {
+        font-size: 22px;
+    }
+
+    .tec {
+        padding-top: 100px;
+        text-align: center;
+    }
+
+    .tec p {
+        font-family: ${props => props.theme.fontDois};
+        font-size: 20px;
+    }
+
+    .tec h3 {
+        margin-top: 5px;
+        margin-bottom: 30px;
+        font-size: 40px;
+    }
+
+    .conteudo {
+        display: flex;
+        padding-top: 70px;
+        justify-content: space-between;
+    }
+
+    .conteudo img {
+        margin-bottom: 30px;
+    }
+
+    .textos h3 {
+        font-size: 36px;
+        margin-bottom: 25px;
+    }
+
+    .textos h4 {
+        font-size: 20px;
+        margin-bottom: 10px;
+        color: ${props => props.theme.corTexto};
+    }
+
+    .textos p {
+        font-family: ${props => props.theme.fontDois};
+        font-size: 18px;
+        margin-bottom: 25px;
+    }
+
+    .desc-1 {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .desc-2 {
+        display: flex;
+    }
+
+    .sorriso {
+        width: 600px;
+    }
+
+    .textos {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .texto-1 {
+        max-width: 100%;
+    }
+
+    .texto-img {
+        display: flex;
+        font-weight: normal;
+        max-width: 100%;
+        gap: 20px;
+    }
+
+    .texto-img img {
+        max-width: 100%;
     }
 
     .maos {

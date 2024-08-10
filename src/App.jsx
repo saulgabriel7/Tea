@@ -6,6 +6,7 @@ import { Sobre } from "./pages/Sobre"
 import { Materiais } from "./pages/Materiais"
 import { Participantes } from "./pages/Participantes"
 import { Descobrir } from "./pages/Descobrir"
+import { Comprovacoes } from "./pages/Comprovacoes"
 
 import { theme } from "./styles/theme.js"
 import { GlobalStyle } from "./styles/global.js"
@@ -34,10 +35,13 @@ const router = createBrowserRouter([
   {
     path:"/Descobrir",
     element: <Descobrir/>
+  },
+
+  {
+    path:"/Comprovacoes",
+    element: <Comprovacoes/>
   }
 ])
-
-
 
 export default function App() {
   return (
