@@ -19,7 +19,6 @@ export const HeaderContainer = styled.div`
     .menu {
         display: flex;
         align-items: center;
-        
     }
 
     .menu ul{
@@ -65,6 +64,17 @@ export const HeaderContainer = styled.div`
         gap: 15px;
     }
 
+
+    @media(max-width:800px) {
+        .menu ul li {
+            display: none;
+        }
+
+        .menu {
+            display: flex;
+            width: 330px;
+        }
+    }
 `
 
 export const IntroContainer = styled.div`
@@ -131,6 +141,26 @@ export const SobreContainer = styled.div`
     .quadros p {
         font-size: 22px;
         font-weight: bold;
+    }
+
+    @media(max-width:800px) {
+        .titulo {
+            font-size: 15px;
+        }
+
+        .desc {
+            font-size: 25px;
+        }
+
+        .quadros div {
+            width: 250px;
+            height: 250px;
+            border-radius: 20px;
+        }
+
+        .quadros p {
+            font-size: 18px;
+        }
     }
 `
 
@@ -215,6 +245,17 @@ export const ImagensContainer = styled.div`
     .imagens img{
         width: 270px;
     }
+
+    @media(max-width:800px) {
+        .frase p {
+            flex-wrap: wrap;
+            font-size: 22px;
+        }
+
+        .imagens img{
+            width: 200px;
+        }
+    }
 `
 
 export const EnviarContainer = styled.div`
@@ -271,7 +312,25 @@ export const EnviarContainer = styled.div`
     .form img {
         position: relative;
         right: 20px;
-        bottom: x;
+    }
+
+    @media(max-width:800px) {
+        .footer {
+            height: 80vh;
+        }
+
+        .textos p {
+            font-size: 15px;
+        }
+
+        .textos h3 {
+            font-size: 30px;
+        }
+
+        .form input {
+            width: 350px;
+            height: 30px;
+        }
     }
 `
 
@@ -295,6 +354,16 @@ export const FooterContainer = styled.div`
     .redes {
         display: flex;
         gap: 10px;
+    }
+
+    @media(max-width:800px) {
+        .rodape {
+            gap: 100px;
+        }
+
+        .rodape p {
+            font-size: 13px;
+        }
     }
 `
 
@@ -410,6 +479,12 @@ export const IntegrantesContainer = styled.div`
         text-align: start;
         font-family: ${props => props.theme.fontUm};
         font-size: 16px;
+    }
+
+    @media(max-width:800px) {
+        .textos {
+            width: 510px;
+        }
     }
 `
 
@@ -538,6 +613,27 @@ export const ExplicacaoContainer = styled.div`
         max-width: 100%;
         height: auto;
     }
+
+    @media(max-width: 800px) {
+        .explicacao-1 {
+            display: block;
+            text-align: center;
+        }
+
+        .explicacao-1 img{
+            width: 400px;
+        }
+
+        .explicacao-2 {
+            display: block;
+            text-align: center;
+        }
+
+        .explicacao-2 img{
+            width: 400px;
+        }
+    }
+    
 `
 
 export const ManualContainer = styled.div`
@@ -606,15 +702,16 @@ export const EvidenciasContainer = styled.div`
         flex-direction: column;
         max-width: 100%;
         background: ${props => props.theme.sobre};
-
     }
 
     .quadro {
         position: sticky;
         top: 0; 
         width: 800px;
-        height: 245px;
-        padding-inline: 50px;
+        height: 270px;
+        padding-inline: 40px;
+        padding-top: 20px;
+        margin-right: 10px;
     }
 
     .quadro h3 {
@@ -705,5 +802,19 @@ export const EvidenciasContainer = styled.div`
     .maos img {
         max-width: 100%;
         height: auto;
+    }
+
+    @media(max-width: 800px) {
+        .quadro {
+            width: 400px;
+            height: 560px;
+            padding-inline: 20px;
+            padding-top: 10px;
+            margin-right: 5px;
+        }
+
+        .quadro h3 {
+            font-size: 18px;
+        }
     }
 `
