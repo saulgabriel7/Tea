@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import Logo from "../assets/logo.svg";
 import LogoText from "../assets/logotext.svg";
 import noti from "../assets/noti.svg";
-import buscar from "../assets/buscar.svg";
 import hamburguer from "../assets/hamburguer.svg";
 import closeIcon from "../assets/close.svg"; // Ícone de fechar o menu
 
@@ -42,8 +41,7 @@ export function Header() {
 
         <div className="opcoes">
           <img src={noti} alt="Notificações" onClick={togglePopup} />
-          <img src={buscar} alt="Buscar" />
-          <img src={hamburguer} alt="Menu" onClick={toggleMenu} />
+          <img className="ham" src={hamburguer} alt="Menu" onClick={toggleMenu} />
         </div>
 
         {/* Pop-up de Novidades */}
@@ -52,14 +50,11 @@ export function Header() {
             <h3>Novidades</h3>
             <p>Aqui estão as últimas novidades!</p>
             <ul>
-              <li>Novidade 1</li>
-              <li>Novidade 2</li>
-              <li>Novidade 3</li>
+              <li>Nova Atulização do App!</li>
             </ul>
           </div>
         )}
 
-        {/* Overlay */}
         {menuOpen && <div className="overlay" onClick={toggleMenu}></div>}
       </header>
     </section>

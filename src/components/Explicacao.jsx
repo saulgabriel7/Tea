@@ -18,7 +18,7 @@ export function Explicacao() {
         </div>
 
         <div className="explicacao-2">
-            <div className="imagem-2">
+            <div>
                 <img src={mao} alt="" />
             </div>
 

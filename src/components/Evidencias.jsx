@@ -2,6 +2,9 @@ import seta from "../assets/seta-baixo.svg"
 import sorriso from "../assets/sorriso.svg"
 import trem from "../assets/trem.svg"
 import maos from "../assets/maos.svg"
+import instagram from "../assets/insta.svg"
+import TikTok from "../assets/tiktok.svg"
+import Twitter from "../assets/x.svg"
 
 export  function Evidencias() {
   return (
@@ -9,10 +12,10 @@ export  function Evidencias() {
         <div className="tec">
             <p>Um Mundo Mais Conectado para Crianças Autistas</p>
             <h3>Tecnologia inovadora para auxiliar no <br /> desenvolvimento e comunicação</h3>
-            <img src={seta} alt=""  />
+            <img src={seta} alt="" />
         </div>
 
-        <div className="conteudo">
+        <div className="conteudo" id="conteudo">
             <div className="quadro">
                 <div className="desc-1">
                     <h3>Evidências científicas</h3> <br />
@@ -32,7 +35,11 @@ export  function Evidencias() {
                     <p>Author Name</p>
                 </div>
 
-                {/* imagens redes */}
+                <div className="redes-sociais">
+                    <img src={instagram} alt="" />
+                    <img src={TikTok} alt="" />
+                    <img src={Twitter} alt="" />
+          </div>
             </div> 
 
             <div className="textos">
@@ -61,9 +68,12 @@ export  function Evidencias() {
                     <div>
                         <img src={trem} alt="" />
                     </div>
+
+                    
                 </div>
             </div>
         </div>
+
 
         <div className="maos">
             <img src={maos} alt="" />
@@ -73,4 +83,3 @@ export  function Evidencias() {
 
   )
 }
-

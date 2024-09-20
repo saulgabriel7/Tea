@@ -1,6 +1,120 @@
 import styled from 'styled-components';
 
+
 export const HeaderContainer = styled.div`
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 15px;
+    max-width: 100%;
+    height: auto;
+    position: relative;
+    z-index: 10;
+  }
+
+  .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+  }
+
+  /* Menu de navegação principal */
+  .menu {
+    display: flex;
+    align-items: center;
+  }
+
+  .menu ul {
+    display: flex;
+    list-style: none;
+    gap: 28px;
+  }
+
+  .menu li a {
+    text-decoration: none;
+    color: ${props => props.theme.corTexto};
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+
+  .menu li a:hover {
+    color: #A4D1E6;
+  }
+
+  .ham{
+    display: none;
+  }
+
+  .close-icon{
+  display: none;
+  }
+
+.popup {
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background: #182352;
+    padding: 20px;
+    width: 280px;
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra */
+    z-index: 1000;
+    transition: all 0.3s ease; /* Transição suave */
+  }
+
+  .popup h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    color: ${props => props.theme.branco}; 
+  }
+
+  .popup p {
+    margin-bottom: 15px;
+    font-size: 14px;
+    color: ${props => props.theme.branco}; 
+  }
+
+  .popup ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .popup ul li {
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: ${props => props.theme.branco};
+  }
+
+  .popup ul li:before {
+    content: '•'; /* Adiciona um ponto antes de cada item */
+    margin-right: 8px;
+    color: #A4D1E6; /* Cor do ponto */
+  }
+
+  /* Estilos para telas menores (ajustes no mobile) */
+  @media (max-width: 768px) {
+    .popup {
+      width: 90%; /* O pop-up ocupa 90% da largura da tela no mobile */
+      right: 5%;
+      top: 60px;
+    }
+  }
+    
+@media (max-width: 1080px) {
+
+.ham{
+    display: flex;
+  }
+
+.close-icon{
+  display: flex;
+  }
+
   .header {
     display: flex;
     justify-content: space-between;
@@ -50,6 +164,7 @@ export const HeaderContainer = styled.div`
     color: ${props => props.theme.corTexto};
     font-weight: 500;
     transition: color 0.3s ease;
+    font-size: 20px;
   }
 
   .menu li a:hover {
@@ -74,52 +189,7 @@ export const HeaderContainer = styled.div`
     cursor: pointer;
   }
 
-  .popup {
-    position: absolute;
-    top: 70px; 
-    right: 85px;
-    background: #182352;
-    padding: 15px;
-    width: 200px;
-    border-radius: 15px;
-    z-index: 1000;
-  }
-
-  .popup h3 {
-    margin-top: 0;
-    margin-bottom: 10px;
-    font-size: 18px;
-    color: ${props => props.theme.branco};
-  }
-
-  .popup p {
-    margin-bottom: 10px;
-    font-size: 14px;
-    color: ${props => props.theme.branco};
-  }
-
-  .popup ul {
-    list-style: none;
-    padding: 0;
-  }
-
-  .popup ul li {
-    margin-bottom: 5px;
-    font-size: 14px;
-    color: ${props => props.theme.branco};
-  }
-
-  .overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 999;
-  }
 `;
-
-
 
 
 export const IntroContainer = styled.div`
@@ -326,7 +396,7 @@ export const ImagensContainer = styled.div`
     height: 100%;
     padding-block: 60px;
     width: 100%;
-    overflow: hidden; /* Para evitar que as imagens saiam da tela */
+    overflow: hidden; 
   }
 
   .frase {
@@ -378,7 +448,6 @@ export const ImagensContainer = styled.div`
 export const EnviarContainer = styled.div`
     .footer {
         background-image: url(${props => props.theme.backgroundImage});
-        opacity: 0.87;
         background-size: cover;
         background-position: center;
         height: 85vh;
@@ -518,6 +587,7 @@ export const IntegrantesContainer = styled.div`
         width: 1060px;
     }
 
+
     .textos p {
         font-family: ${props => props.theme.fontDois};
         font-size: 16px;
@@ -600,7 +670,15 @@ export const IntegrantesContainer = styled.div`
 
     @media(max-width:800px) {
         .textos {
-            width: 510px;
+            width: 300px;
+        }
+
+        .textos h3 {
+        font-size: 24px;
+        text-align: left;
+    }
+        .participantesContainer{
+            gap:35px;
         }
     }
 `
@@ -644,6 +722,7 @@ export const MateriaisContainer = styled.div`
         padding: 40px;
         border-radius: 20px;
         background: ${props => props.theme.branco};
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
     }
 
     .arduino {
@@ -668,6 +747,23 @@ export const MateriaisContainer = styled.div`
     .imagem img {
         width: 100%;
         height: auto;
+    }
+
+    @media(max-width: 800px){
+        .arduino {
+        display: block;
+    }
+
+    .card{
+        margin-bottom:35px;
+    }
+
+    .cards{
+        width: 350px;
+        gap: 0;
+        margin-top: 35px;
+    }
+
     }
 `
 
@@ -697,7 +793,6 @@ export const ExplicacaoContainer = styled.div`
     .textos p {
         font-size: 18px;
         margin-bottom: 50px;
-        
     }
 
     .imagem-1 img {
@@ -731,27 +826,47 @@ export const ExplicacaoContainer = styled.div`
         height: auto;
     }
 
-    @media(max-width: 800px) {
-        .explicacao-1 {
-            display: block;
-            text-align: center;
+    @media (max-width: 800px) {
+        .explicacao-1{
+            padding-top: 0px;
+            display: flex;
+            flex-direction: column-reverse; /* Move images above text */
+            align-items: center;
+            padding-inline: 35px;
         }
 
-        .explicacao-1 img{
+        .explicacao-2{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 35px;
+            padding-inline: 35px;
+        }
+
+        .imagem-1 img,
+        .imagem-2 img {
             width: 400px;
         }
 
-        .explicacao-2 {
-            display: block;
-            text-align: center;
+        .textos h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            text-align: left;
         }
 
-        .explicacao-2 img{
-            width: 400px;
+        .textos p {
+            font-size: 16px;
+            text-align: left;
+            margin-bottom: 35px;
+        }
+
+        .textos h3 br,
+        .textos p br {
+            display: none;
         }
     }
-    
-`
+`;
+
 
 export const ManualContainer = styled.div`
     .manual {
@@ -759,6 +874,11 @@ export const ManualContainer = styled.div`
         flex-direction: column;
         padding-inline: 135px;
         padding-top: 70px;
+    }
+
+    .manu{
+        width: 90px;
+        margin-bottom: 35px;
     }
 
     .titulo {
@@ -775,11 +895,11 @@ export const ManualContainer = styled.div`
     .titulo h3 {
         font-size: 24px;
         margin-top: 5px;
-        margin-bottom: 50px;
+        margin-bottom: 15px;
     }
 
     .titulo img {
-        width: 900px;
+        width: 100%;
     }
 
     .descricao h4 {
@@ -811,6 +931,13 @@ export const ManualContainer = styled.div`
         max-width: 100%;
         height: auto;
     }
+
+    @media(max-width: 800px){
+        .manual {
+        padding-inline: 35px;
+        padding-top: 35px;
+    }
+    }
 `
 
 export const EvidenciasContainer = styled.div`
@@ -831,6 +958,7 @@ export const EvidenciasContainer = styled.div`
         margin-right: 10px;
     }
 
+
     .quadro h3 {
         font-size: 22px;
     }
@@ -844,6 +972,7 @@ export const EvidenciasContainer = styled.div`
         font-family: ${props => props.theme.fontDois};
         font-size: 20px;
     }
+
 
     .tec h3 {
         margin-top: 5px;
@@ -894,6 +1023,7 @@ export const EvidenciasContainer = styled.div`
     .textos {
         display: flex;
         flex-direction: column;
+        margin-right: 100px;
     }
 
     .texto-1 {
@@ -921,17 +1051,89 @@ export const EvidenciasContainer = styled.div`
         height: auto;
     }
 
+    .redes-sociais img{
+        margin-top: 10px;
+        margin-inline:10px;
+    }
+
+        
+
     @media(max-width: 800px) {
-        .quadro {
-            width: 400px;
-            height: 560px;
-            padding-inline: 20px;
-            padding-top: 10px;
-            margin-right: 5px;
+        .sorriso {
+            width: 100%;
+            padding-inline: 15px;
+        }
+
+        .texto-1 {
+        margin-inline: 35px;
+        margin-top: 35px;
+        }
+
+        .textos h3 {
+            font-size: 24px;
+        }
+
+        .textos h4 {
+            font-size: 18px;
+        }
+
+        .textos p{
+            font-size: 16px;
         }
 
         .quadro h3 {
             font-size: 18px;
         }
+        
+        .texto-img{
+            margin-inline: 35px;
+        }
+
+        .conteudo img{
+            margin-bottom:0px;        
+        }
+
+        .tec {
+            padding-top: 50px;
+            margin-inline: 35px;
+        }
+
+        .tec h3 {
+            font-size: 24px;
+        }
+
+        .textos h3 br {
+            display: none;
+        }
+
+        .tec p {
+            font-size: 16px;
+        }
+
+        .texto-img{
+            display: block;
+        }
+
+        .conteudo {
+            padding-top: 50px;
+            flex-direction: column; 
+        }
+
+        .textos{
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+        }
+
+        .quadro {
+            width: 100%;
+            position: static; /* Remove o posicionamento sticky no mobile */
+            margin-bottom: 35px;
+            height: auto;
+            padding-inline: 20px;
+            padding-top: 10px;
+            margin-right: 5px;
+}
+        }
     }
-`
+`;

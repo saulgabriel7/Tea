@@ -1,5 +1,6 @@
 import img from "../assets/manual.svg"
 import maos from "../assets/maos.svg"
+import manual from "../assets/manualgreen.svg"
 
 export  function Manual() {
   return (
@@ -8,6 +9,9 @@ export  function Manual() {
         <div className="titulo">
           <p>Bem-vindo ao Tea Sense!</p>
           <h3>Manual completo de como usar o TeaSense</h3>
+          <div className="manu">
+            <img src={manual} alt="" />
+          </div>
           <div>
             <img src={img} alt="" />
           </div>
